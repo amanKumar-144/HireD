@@ -86,7 +86,7 @@ const App = () => {
     }setJobDetailsMap(jobDetailsMap);
 
 
-    const totalToJobId=[];
+    /*const totalToJobId=[];
     for(var i=1;i<=totalJobsApplied;i++){
       const val1=await contract.methods.totalToJobId(i).call();
       totalToJobId.push(val1);
@@ -108,7 +108,7 @@ const App = () => {
     for(var i=1;i<=totalJobsApplied;i++){
       const val1=await contract.methods.totalToSeekerIdAccepted(i).call();
       totalToSeekerIdAccepted.push(val1);
-    }setTotalToSeekerIdAccepted(totalToSeekerIdAccepted);
+    }setTotalToSeekerIdAccepted(totalToSeekerIdAccepted);*/
 
 }
 
@@ -159,13 +159,13 @@ const App = () => {
     contract.methods.registerSeeker(name,age,gender,emailId,phoneNum).send({from:account});
   }
   const loginSeeker=()=>{
-    contract.methods.loginSeeker().send({from:account});
+    contract.methods.loginSeeker();
   }
   const registerCompany=(companyName)=>{
     contract.methods.registerCompany(companyName).send({from:account});
   }
   const loginCompany=()=>{
-    contract.methods.loginCompany().send({from:account});
+    contract.methods.loginCompany();
   }
   const postAJob=(title,roleType,companyName,companyUrl,location,description)=>{
     contract.methods.postAJob(title,roleType,companyName,companyUrl,location,description).send({from:account});
