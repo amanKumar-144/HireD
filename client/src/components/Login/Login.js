@@ -97,7 +97,7 @@ const Login = (props) => {
             </video>
 
             <div className='content'>
-                <h1>Job Portal</h1>
+                <h1>Hire D</h1>
                 <p>Blockchain Powered App</p>
                 <div>
                     
